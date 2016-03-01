@@ -20,7 +20,7 @@ RUN echo 'user:password' | chpasswd
 ADD app /app
 RUN cd /app && npm install
 
-VOLUME ['/home']
+VOLUME /home
 
 EXPOSE 21/tcp 80
 CMD ["/usr/bin/supervisord"]
